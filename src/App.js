@@ -2,12 +2,19 @@
 //
 
 import React from 'react';
+
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+
 import './styles/App.scss';
 
 function App() {
   return (
     <div className='app'>
-      <h2>Slack</h2>
+      <Header />
+      <div className='app__body'>
+        <Sidebar />
+      </div>
     </div>
   );
 }
