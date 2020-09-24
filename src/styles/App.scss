@@ -5,6 +5,15 @@
   --slack-color: #3f0f40;
 }
 
+body {
+  // overflow: hidden;
+}
+
 .app {
   font-family: 'Roboto Condensed', sans-serif;
+
+  .app__body {
+    display: flex;
+    height: 100vh;
+  }
 }

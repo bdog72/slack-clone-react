@@ -4,8 +4,10 @@
 @import './App.scss';
 
 .sidebar {
+  flex: 0.3;
   background-color: var(--slack-color);
   border-top: 1px solid #49274b;
+  // max-width: 300px;
   max-width: 260px;
   color: #fff;
 
@@ -29,6 +31,7 @@
         align-items: center;
         font-size: 13px;
         font-weight: 400;
+        // margin-right: 10px;
 
         .MuiSvgIcon-root {
           color: green;
