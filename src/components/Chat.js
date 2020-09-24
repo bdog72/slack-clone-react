@@ -8,6 +8,8 @@ import { InfoOutlined, StarBorderOutlined } from '@material-ui/icons';
 
 import '../styles/Chat.scss';
 import db from '../firebase';
+
+import ChatInput from '../components/ChatInput';
 import Message from './Message';
 
 function Chat() {
@@ -29,9 +31,6 @@ function Chat() {
         setRoomMessages(snapshot.docs.map((doc) => doc.data()))
       );
   }, [roomId]);
-
-  // console.log(roomDetails);
-  // console.log(roomMessages);
 
   return (
     <div className='chat'>
@@ -58,6 +57,7 @@ function Chat() {
           />
         ))}
       </div>
+      <ChatInput channelName={roomDetails?.name} channelId={roomId} />
     </div>
   );
 }

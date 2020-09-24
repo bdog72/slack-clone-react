@@ -7,17 +7,18 @@ import { AccessTime, HelpOutline, Search } from '@material-ui/icons';
 import { Avatar } from '@material-ui/core';
 
 import '../styles/Header.scss';
+import { useStateValue } from '../StateProvider';
 
-function Header({ user }) {
+function Header() {
+  const [{ user }] = useStateValue();
+
   return (
     <div className='header'>
       <div className='header__left'>
         <Avatar
           className='header__avatar'
-          // alt={user?.displayName}
-          alt='Brian Bycynski'
-          // src={user?.photoURL}
-          src='https://cdn.shopify.com/s/files/1/0012/5114/7851/products/2020-presidential-items-biden-harris-2020-presidential-campaign-pinback-button-jb-317-14726521651275_720x.png?v=1585157336'
+          alt={user?.displayName}
+          src={user?.photoURL}
         />
         <AccessTime />
       </div>
